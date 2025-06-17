@@ -13,11 +13,10 @@ jobs:
       id-token: write
     steps:
       - uses: actions/checkout@v4
-
-      - name: Set up Ruby 2.7
+      - name: Set up Ruby 3
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.7
-
+          ruby-version: 3
+          bundler-cache: true
       - name: Publish to RubyGems
         uses: rubygems/release-gem@v1
